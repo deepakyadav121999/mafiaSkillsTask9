@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+.left>p{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.user{
+ 
+    background-color: rgb(238, 235, 235);
+    padding: 15px;
+    border-radius: 10px;
+  color:  rgb(16, 143, 216);
+  
+}
+.right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar{
+   
+    display: flex;
+   justify-content: space-between;
+   background-color: whitesmoke;
+height: 60px;
+align-items: center;
+padding: 10px;
+border-bottom: 0.1px solid rgb(243, 240, 240);
+}
+.middle{
+    display: flex;
+gap: 20px;
+}
+.hero_section{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  
+
+    padding: 20px;
+ 
+}
+.left_div{
+
+    width: 40%;
+  
+    display: flex;
+    flex-direction: column;
+padding: 30px;
+gap: 25px;
+}
+.color_change{
+    color: rgb(28, 185, 247);
+}
+#btn{
+    padding: 20px;
+    max-width: 300px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(28, 185, 247);
+    color: white;
+    font-size: large;
+    font-weight: 500;
+}
+.right_div{
+  
+    width: 40%;
+    display: flex;
+
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+   
+}
+.right_div>img{
+    /* background-color: blue; */
+ 
+    padding: 20px;
+    animation-name: mymove;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes mymove {
+    0%   {
+        transform: translate(0,0) ;
+    }
+    25%  {
+        transform: translate(-20px, 0);
+    }
+    50%  {
+        transform: translate(-20px , -20px);
+        transform: scaleX(0.8);
+    }
+    75%  {
+        transform: translate(20px,0px);
+    }
+    100% {
+        transform: translate(0px, 20px);
+        
+    }
+  }
+
+
+.header_main_container{
+    position: relative;
+    overflow: hidden;
+}
+.lable_input{
+    display: none;
+
+}
+.sidebar{
+    position: absolute;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(56, 53, 59);
+  right: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 30px;
+ transform: translateX(0px);
+ color: white;
+}
+#showlist:checked ~ .sidebar{
+        transform: translateX(250px);
+}
+input{
+    display: none;
+}
+.line{
+    width: 16px;
+    height: 4px;
+    background-color: black;
+}
+  
+ #btn:hover{
+ transform: scale(1.1) rotate(-7deg) ;
+ transition: all 300ms ease-in;
+ }  
+
+
+ 
+
+@media (width <= 687px){
+   .hero_section{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+ 
+   }
+   .right_div{
+    width: 90%;
+   }
+   .left_div{
+    width: 90%;
+   }
+   .middle{
+    display: none;
+   }
+   .right>button{
+    display: block;
+   }
+   .lable_input{
+
+ display: flex;
+ flex-direction: column;
+ gap: 1px;
+}
+
+ 
+}
